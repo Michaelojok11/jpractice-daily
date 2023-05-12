@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+    </script>
 </head>
 <body>
 <!--  -->
@@ -21,9 +26,19 @@
 </button>
 
 <!-- display block -->
-<p id="demo" style="display:none"> Hello javascript </p>
-<button type="button" onclick="document.getElementById('demo').style.display='block'"> Click Me!
+<p id="demo1" style="display:none"> Hello javascript </p>
+<button type="button" onclick="document.getElementById('demo1').style.display='block'"> Click Me!
 </button>
+
+<!--  -->
+<p id="demo"> A paragraph.</p>
+<button type="button" onclick="myFunction()"> Try it </button>
+
+<!-- My first web page -->
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML= 5+6;
+</script>
 
 
 <script src="index.js">
