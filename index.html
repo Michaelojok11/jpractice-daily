@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--  -->
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+   
+<!-- Javascript can change HTML Styles -->
+<button type="button" onclick="document.getElementById('demo').style.fontsize='35px'"> Click Me!
+</button>
+<!--  -->
+<button type="button" onclick="document.getElementById('demo').style.display='none'"> Click Me!
+</button>
+
+<!-- display block -->
+<p id="demo" style="display:none"> Hello javascript </p>
+<button type="button" onclick="document.getElementById('demo').style.display='block'"> Click Me!
+</button>
+
+
+<script src="index.js">
+
+</script>
+
+</body>
+</html>
