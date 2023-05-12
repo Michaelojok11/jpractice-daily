@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function myFunction(){
-            document.getElementById("demo").innerHTML = "Paragraph changed.";
-        }
-    </script>
+   
 </head>
 <body>
-<!--  -->
+
 <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
 <img id="myImage" src="pic_bulboff.gif" style="width:100px">
 <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
@@ -84,11 +80,15 @@ document.getElementById("demo9").innerHTML = c;
     }
 </script>
 
+<!-- Numbers are written with or without decimals -->
+<p id="demo"></p>
+<script>
+    document.getElementsbyId("demo").innerHTML = 10.50;
+</script>
 
 
-
-
-
+<!-- variables -->
+<!-- variables are used to store data values -->
 
 
 
