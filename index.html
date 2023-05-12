@@ -52,19 +52,37 @@
 <!-- semi-colons are used to seperate javascript statements -->
 
 <!-- Addition -->
-<p id="demo6"></p>
+ <p id="demo6"></p>
 <script>
-    let a,b,c;
+    let a,x,c;
     a = 5;
-    b = 6;
-    c = a + b;
+    x = 6;
+    c = a + x;
     document.getElementById("demo6").innerHTML = c;
 </script>
 
+<!-- Multiple statements on one line -->
 
+<p id="demo9"></p>
 
+<script>
+let a, b, c;
+a = 5; b = 8; c = a + b;
+document.getElementById("demo9").innerHTML = c;
+</script>
 
-
+<!-- for best readability programmers like to avoid code line of more than 80 characters -->
+<!-- codeblocks can be grouped together in curly brackets, code blocks define statements that are executed together -->
+<!-- Javascript functions is used to define statements to be executed together -->
+<button type="button" onclick="myFunction()"> Click Me!</button>
+<p id="demo4"></p>
+<p id="demo8"></p>
+<script>
+    function myFunction(){
+        document.getElementById("demo4").innerHTML = "Hello Michael!"
+        document.getElementById("demo8").innerHTML = "How are you doing?"
+    }
+</script>
 
 
 
