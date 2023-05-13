@@ -2,31 +2,39 @@
 <html>
 <body>
 
-<!-- Declaring variables in the same line -->
-<p id="fund"></p>
-<script>
-    let person = "Michael Ojok", carName = "Range Rover", price = 200;
-    document.getElementById("fund").innerHTML = carName;
-    document.getElementById("fund").innerHTML = person;
-    document.getElementById("fund").innerHTML = price;
-</script>
+    <!-- <p id="demo"></p>
+    <script>
+        // create an array:
+        const cars = ["Saab", "Volvo", "BMW"];
+        // Change an element:
+        cars[0] = "Toyota";
+        // Add an element:
+        // Use the push element to add an element
+        cars.push("Audi");
+        // Display the array
+        document.getElementById("demo").innerHTML = cars;
+    </script> -->
+
+    <!-- you can change the object properties -->
+    <p id="program"></p>
+    <script>
+        const car = {type:"Fiat", model:"500", color:"white"};
+        car.color = "red";
+        car.owner = "Michael";
+        document.getElementById("program").innerHTML = "The Car owner is " + "" + car.owner;
+    </script>
+
+    <!-- Javascript operators -->
+    <p id="mike"></p>
+    <script>
+        let x = 5;
+        let y = 2;
+        let z = x + y;
+        document.getElementById("mike").innerHTML = "The sum of x + y is: " + z;
+    </script>
 
 
-<!--  -->
-<p id="dad"></p>
-<script>
-    let carName;
-    document.getElementById("dad").innerHTML = carName;
-</script>
 
-<!-- 
-
- -->
-<p id="malmo"></p>
-<script>
-    let x = 2 + 3 + "5";
-    document.getElementById("malmo").innerHTML = x;
-</script>
 
 </body>
 </html>
