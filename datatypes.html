@@ -41,6 +41,27 @@
     }
 </script>
 
+<!-- local variables -->
+<!-- variables declared within a javascript become local to the function. Local variables can only be accessed from within the function -->
+
+<p id="michael1"></p>
+<p id="michael2"></p>
+<script>
+    let text = "Outside: " + typeof carName;
+    document.getElementById("michael1").innerHTML = text;
+
+    function myFunction(){
+        let carName = "Volvo";
+        let text = "Inside: " + typeof carName + " " + carName;
+        document.getElementById("michael2").innerHTML = text;
+    }
+    myFunction();
+</script>
+
+
+
+
+
 
 </body>
 </html>
