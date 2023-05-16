@@ -8,14 +8,38 @@
 </head>
 <body>
 <!-- javascript functions -->
-<!-- <p id="ojok"></p>
+
+<!-- <p id="demo"></p>
 <script>
-    function myFunction(p1, p2) {
-        return p1 * p2;
+    function toCelcius(f){
+        return (5/9) * (f-32);
     }
-    let result = myFunction(4,3);
-    document.getElementById("ojok").innerHTML = result;
+    let value = toCelcius(77);
+    document.getElementById("demo").innerHTML = value;
 </script> -->
+
+<!-- javascript functions -->
+<!-- A javascript function is ablock of code designed to perform a particular task. A javascript fucntion is executed when something invokes (calls it) -->
+<p id="mikecy"></p>
+<script>
+    function toCelcius(f){
+        return (5/9) * (f-32);
+    }
+    let value = toCelcius();
+    document.getElementById("mikecy").innerHTML = value;
+</script>
+
+<!-- Accessing the function without () returns the function and not the fucntion result -->
+
+<!-- functions used as variables -->
+<p id="barbra"></p>
+<script>
+    let text = "The temperature is" + toCelcius(77) + "Celcius.";
+    document.getElementById("barbra").innerHTML = text;
+    function toCelcius(fahrenheit){
+        return (5/9) * (fahrenheit-32);
+    }
+</script>
 
 
 </body>
