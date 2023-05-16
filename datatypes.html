@@ -38,6 +38,22 @@
 
     <!-- Javascript evaluates expressions from left to right. 
                     Different sequences can produce different results -->
+        <p id="michael"></p>
+        <script>
+            let x = 16 + 4 + "Volvo";
+            document.getElementById("michael").innerHTML = x;
+        </script>
+
+
+    <p id="demo"></p>
+    <script>
+    let carName1 = "Volvo XC60";
+    let carName2 = 'Volvo XC60';
+
+    document.getElementById("demo").innerHTML =
+    carName1 + "<br>" + 
+    carName2; 
+    </script>
 
 
 </body>
