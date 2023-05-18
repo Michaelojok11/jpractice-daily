@@ -81,7 +81,7 @@
 
 </script>
 
-
+<!-- 
 <p id="demo"></p>
 
 <script>
@@ -95,9 +95,9 @@ const person = {
 // Display some data from the object:
 document.getElementById("demo").innerHTML =
 person.firstName + " " + person.lastName;
-</script>
+</script> -->
 
-<p id="demo"></p>
+<!-- <p id="demo"></p>
 
 <script>
 // Create an object:
@@ -110,11 +110,24 @@ const person = {
 // Display some data from the object:
 document.getElementById("demo").innerHTML =
 person["firstName"] + " " + person["lastName"];
-</script>
+</script> -->
 
 <!-- Object methods -->
 <!-- Objects can also hav emethods. Methods are actons that can be performed on objects. NMethods are stored in properties as function definitions -->
 
 <!-- This keyword -->
+<!-- Accessing object method -->
+    <p id="Beb"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullname: function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("Beb").innerHTML = person.fullname();
+    </script>
 </body>
 </html>
