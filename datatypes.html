@@ -192,13 +192,13 @@ onload
 
     <!-- Never create strings as objects -->
 
-    <p id="hub"></p>
+    <p id="demo"></p>
+
     <script>
-        let x = "John";
-        let y = new string ("John");
-        document.getElementById("demo").innerHTML = (x===y);
-    </script>
-    
+    let text = "Apple, Banana, Kiwi";
+    let part = text.slice(7,13);
+    document.getElementById("demo").innerHTML = part; 
+    </script>    
 
 
 </body>
