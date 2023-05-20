@@ -213,7 +213,30 @@ onload
     let str = "Apple, Banana, Kiwi";
     document.getElementById("demo").innerHTML = str.substr(-4);
     </script>
+
     <!--  -->
+    <p id="michael"></p>
+    <script>
+        function myFunction (){
+            let text = document.getElementById("demo").innerHTML;
+            document.getElementBy("demo").innerHTML = text.replace("Microsoft","W3Schools");
+        }
+    </script>
+
+    <!--  -->
+    <p id="demo">Please visit Microsoft and Microsoft!</p>
+
+    <script>
+    function myFunction() {
+    let text = document.getElementById("demo").innerHTML; 
+    document.getElementById("demo").innerHTML =
+    text.replace("Microsoft","W3Schools");
+    }
+    </script>
+
+
+    <!--  -->
+
 
 
 </body>
