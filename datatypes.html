@@ -276,16 +276,26 @@ document.getElementById("demo").innerHTML = text;
 <!-- End of uppercase -->
 
 <!-- Converting to lowercase -->
+
 <!-- Converting to upper case  -->
 <button onclick="myFunction()"> Try this one </button>
 <p id="mikec"> Hello World!</p>
 <script>
     function myFunction(){
         let text = document.getElementById("mikec").innerHTML;
-        document.getElementById("mikec").innerHTML = text.toUpperCase();
+        document.getElementById("mikec").innerHTML = text.toLowerCase();
    }
 </script>
 <!-- End of lowercase -->
+
+<!-- Concat() method -->
+<p id="demo"></p>
+<script>
+    let text1 = "Hello";
+    let text2 = "World!";
+    let text3 = text.concat("",text2);
+    document.getElementById("demo").innerHTML = text3;
+</script>
 
 </body>
 </html>
