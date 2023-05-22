@@ -104,12 +104,12 @@ document.getElementById("demo").innerHTML = text.padStart(4,0);
 <!--
     padend()
   -->
-  <p id="Learning"></p>
+  <!-- <p id="Learning"></p>
   <script>
     let text = "5";
     text = text.padEnd(5, "0");
     document.getElementById("Learning").innerHTML = text;
-  </script>
+  </script> -->
 
 <!-- Javascript strings -->
 <p id="Barbra"></p>
@@ -119,8 +119,29 @@ document.getElementById("demo").innerHTML = text.padStart(4,0);
     document.getElementById("Barbra").innerHTML = text.padEnd(4,"x");
 </script>
 
+<!-- Javascript string chartAt() -->
+<!-- The chart() method returns the character at a specified index (position) in a string: -->
+<p id="demo"></p>
 
+<script>
+var text = "HELLO WORLD";
+document.getElementById("demo").innerHTML = text.charAt(0);
+</script>
 
+<!--  property access -->
+<p id="michaelojok"></p>
+<script>
+    let text = "HELLO WORLD";
+    document.getElementById("michaelojok").innerHTML = text[0];
+</script>
+
+<!-- converting a string to an array, using the split method -->
+    <p id="love"></p>
+    <script>
+        let text = "a,b,c,d,e,f";
+        const myArray = text.split(",");
+        document.getElementById("ove").innerHTML = myArray[0];
+    </script>
 
 </body>
 </html>
