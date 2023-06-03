@@ -31,14 +31,20 @@
   ">+3</button>
 
   <button onclick="
-  cartQuantity = cartQuantity + 4;
+  cartQuantity += 4;
   console.log(`Cart Quantity: ${cartQuantity}`);
   "> +4  </button>
 
   <!-- button 5 -->
   <button onclick="
-  cartQuantity = cartQuantity + 5;
+  cartQuantity += 5;
   console.log(`Cart Quantity: ${cartQuantity}`)"> +5 </button>
+
+  <!-- Removing from the Cart -->
+  <button onclick=" 
+  cartQuantity = cartQuantity - 1;
+      console.log(`Cart quantity: ${cartQuantity}`);  
+  "> Remove from Cart </button>
 
 <!-- resetting the cart quantity feature -->
   <button onclick="
