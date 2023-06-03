@@ -7,14 +7,29 @@
   <title> Cart Quantity </title>
 </head>
 <body>
-  <button>Show Quantity </button>
-  <button> Add to Cart</button>
-  <button> +2</button>
+  <!-- Onclick runs some javascript -->
+  <button onclick="
+  console.log(`Cart quantity: ${cartQuantity}`);
+  ">Show Quantity </button>
+
+  <button onclick="
+  cartQuantity = cartQuantity + 1;
+  console.log(`Cart quantity: ${cartQuantity}`);
+  "> Add to Cart</button>
+
+  <button onclick="
+  cartQuantity = cartQuantity + 2;
+  console.log(`Cart quantity: ${cartQuantity}`);  
+  "> +2</button>
+
   <button>+3</button>
+
   <button> Reset Cart </button>
-  
+
   <!-- javascript code -->
   <script>
+    //  First, we need a variable to save the cart quantity
+    let cartQuantity = 0;
 
 
 
