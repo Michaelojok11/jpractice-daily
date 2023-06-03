@@ -46,6 +46,23 @@
       console.log(`Cart quantity: ${cartQuantity}`);  
   "> Remove from Cart </button>
 
+  <!-- vvv This code was changed. vvv -->
+  <button onclick="
+  cartQuantity--;
+  console.log(`Cart quantity: ${cartQuantity}`);
+  ">Remove from cart</button>
+
+<button onclick="
+  cartQuantity -= 2;
+  console.log(`Cart quantity: ${cartQuantity}`);
+">-2</button>
+
+<button onclick="
+  cartQuantity -= 3;
+  console.log(`Cart quantity: ${cartQuantity}`);
+">-3</button>
+<!-- ^^^ This code was changed. ^^^ -->
+
 <!-- resetting the cart quantity feature -->
   <button onclick="
   cartQuantity = 0;
@@ -65,6 +82,14 @@
 // PascalCase , there is one feature where we use the PascalCase
 // Kebab-case doesnt work in Javascript but it works in Html and CSS
 // snake_case , cart_quantity uses the underscore.Its used in other languages but not javascript.
+
+
+
+// challenge exercises
+
+
+
+
   </script>
  
 </body>
