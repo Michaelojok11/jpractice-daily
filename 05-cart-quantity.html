@@ -13,12 +13,16 @@
   ">Show Quantity </button>
 
   <button onclick="
-  cartQuantity = cartQuantity + 1;
+  cartQuantity += 1;
+  // shortcut for +=1 is the same as ++;
+
   console.log(`Cart quantity: ${cartQuantity}`);
   "> Add to Cart</button>
 
   <button onclick="
-  cartQuantity = cartQuantity + 2;
+  
+  // shortcut for writing it 
+  cartQuantity += 2; 
   console.log(`Cart quantity: ${cartQuantity}`);  
   "> +2</button>
 
@@ -27,8 +31,10 @@
   console.log(`Cart quantity: ${cartQuantity}`);
   ">+3</button>
 
+<!-- resetting the cart quantity feature -->
   <button onclick="
-  cartQuantity = cartQuantity;
+  cartQuantity = 0;
+  console.log('Cart was reset')
   console.log(`Cart quantity:${cartQuantity}`);"> 
   Reset Cart </button>
 
@@ -38,7 +44,12 @@
     let cartQuantity = 0;
 
 
-
+// shortcuts for operators
+// Naming of variables
+// camelCase is the standard for javascript
+// PascalCase , there is one feature where we use the PascalCase
+// Kebab-case doesnt work in Javascript but it works in Html and CSS
+// snake_case , cart_quantity uses the underscore.Its used in other languages but not javascript.
   </script>
  
 </body>
