@@ -9,7 +9,9 @@
 <body>
 
   <!-- calculator buttons -->
-  <!-- button 1 -->
+  
+  <!-- row 1 -->
+    <!-- button 1 -->
   <button onclick="
   calculation += '1';
   console.log(calculation);">
@@ -41,27 +43,51 @@
     console.log(calculation);
     ">  = </button>
    
-
-
 <!-- row 2 -->
 <div style="margin-top: 10px;">
-  <button> 4</button>
+  <button onclick="
+    calculation +=4;
+    console.log(calculation);
+    "> 4</button>
 
 <!-- button 5 -->
-<button> 5 </button>
+<button onclick="
+calculation +=5;
+console.log(calculation);
+"> 5 </button>
 <!-- button 6 -->
-<button> 6 </button>
+<button onclick="
+calculation +=6;
+console.log(calculation);
+"> 6 </button>
 <!-- button - -->
-<button> - </button>
+<button onclick="
+calculation-= ' - ';
+console.log(calculation);
+"> - </button>
 
 </div>
 <!-- End of row 2 -->
 
 <!-- row 3 -->
 <div style="margin-top: 10px;">
-  
-
+  <button> 7</button>
+  <button> 8 </button>
+  <button> 9 </button>
+  <button> * </button>
 </div>
+
+<!-- row 4  -->
+<div style="margin-top: 10px;">
+  <button> 0 </button>
+  <button> . </button>
+  <button> = </button>
+  <button> / </button>
+</div>
+ <!-- row 5 -->
+ <div style="padding-top: 10px;">
+  <button> Clear </button>
+ </div>
 
 
 
