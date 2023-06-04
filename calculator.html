@@ -37,11 +37,11 @@
     "> + </button>
 
     <!-- button = -->
-    <!-- using the eval to convert the string into math -->
+    <!-- using the eval to convert the string into math
     <button onclick="
     calculation=eval(calculation);
     console.log(calculation);
-    ">  = </button>
+    ">  = </button> -->
    
 <!-- row 2 -->
 <div style="margin-top: 10px;">
@@ -94,14 +94,33 @@ console.log(calculation);
 
 <!-- row 4  -->
 <div style="margin-top: 10px;">
-  <button> 0 </button>
-  <button> . </button>
-  <button> = </button>
-  <button> / </button>
+  <button onclick="
+    calculation += ' 0 ';
+    console.log(calculation);
+    "> 0 </button>
+    
+    <!-- The dot  -->
+  <button onclick="
+  calculation += '.';
+  console.log(calculation);
+  "> . </button>
+
+  <button onclick="
+  calculation=eval(calculation);
+  console.log(calculation);
+     "> = </button>
+
+  <button onclick="
+  calculation += ' / ';
+  console.log(calculation);
+  "> / </button>
 </div>
  <!-- row 5 -->
  <div style="padding-top: 10px;">
-  <button> Clear </button>
+  <button onclick="
+    calculation=' ';
+    console.log(calculation);
+     "> Clear </button>
  </div>
 
 
@@ -111,10 +130,6 @@ console.log(calculation);
   <script>
     // Declaring a variable
     let calculation ='';
-
-
-
-  
   </script>
  
 </body>
