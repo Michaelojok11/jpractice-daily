@@ -55,26 +55,41 @@
 calculation +=5;
 console.log(calculation);
 "> 5 </button>
+
 <!-- button 6 -->
 <button onclick="
 calculation +=6;
 console.log(calculation);
 "> 6 </button>
+
 <!-- button - -->
 <button onclick="
-calculation-= ' - ';
+calculation += ' - ';
 console.log(calculation);
 "> - </button>
-
 </div>
 <!-- End of row 2 -->
 
 <!-- row 3 -->
 <div style="margin-top: 10px;">
-  <button> 7</button>
-  <button> 8 </button>
-  <button> 9 </button>
-  <button> * </button>
+  <button onclick="
+    calculation +=7;
+    console.log(calculation);
+    "> 7</button>
+
+  <button onclick="
+  calculation +=8;
+  console.log(calculation);
+  "> 8 </button>
+  
+  <button onclick="
+  calculation +=9;
+  console.log(calculation);
+  "> 9 </button>
+  <button onclick="
+  calculation += ' * ';
+  console.log(calculation);
+  "> * </button>
 </div>
 
 <!-- row 4  -->
