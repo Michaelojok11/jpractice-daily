@@ -27,7 +27,21 @@
      computerMove = 'scissors';
   }
   console.log(computerMove);
+
+  // comparing with the computer moves
+  let result = '';
   
+  if (computerMove === 'rock'){
+    result = 'Tie';
+  } else if (computerMove === 'paper'){
+    result = 'You loose';
+  } else if (computerMove === 'scissors'){
+    result = 'You win';
+  }
+
+  // display the result above in apopup
+  
+  alert (`You picked rock. Computer picked ${computerMove}. ${result};`);
   "> Rock </button>
 
 
@@ -38,18 +52,8 @@
   <button> Scissors </button>  
 
   <!--  -->
-  <button>
-
-    
-  </button>
-
-  <!--  -->
-  <button>
-    
-  </button>
+ 
   
-
-  <!--  -->
 
   </div>
 
