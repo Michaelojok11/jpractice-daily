@@ -89,6 +89,8 @@ console.log(true || false);
 console.log(!true);
 */
 
+
+/*
 // Truthy and Falsy values
 
   if (0) {
@@ -96,7 +98,7 @@ console.log(!true);
   }
 
   /* Falsy values are 0 '' NaN undefined and Null , any value that is not on the list is a trusthy value*/
-
+/*
     const cartQuantity = 5;
     if (cartQuantity) {
       console.log('Cart has products');
@@ -107,8 +109,40 @@ console.log(!true);
     // NaN not a number
     console.log('text' / 5);
     
+    // undefined
+    // const Cannot be used with undefined
     let variable1;
     console.log(variable1);
+
+    */
+
+
+      // shortcuts for if statements
+
+      const result = true? 'truthy': 'falsy'
+      console.log(result);
+
+      false && console.log('hello');
+
+      const message = 5 && 'hello';
+      console.log('message');
+
+      const currency = 'EUR' || 'USD';
+      console.log(currency);
+
+
+      // 
+      const currency = undefined || 'USD';
+      console.log(currency);
+
+// summary
+/* boolenas values (true and false)
+- if-statements
+- comparison operators
+
+
+    
+
 
 
 
