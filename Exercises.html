@@ -60,7 +60,35 @@
         console.log('No discount');
       }
         
-     
+    //  Generate a random number with Math.random(). Save it in a variable.
+    // Instead of displaying 'heads' or 'tails' in the console, save the result in a variable called 'result'.
+    // Let's say we are trying to guess the result. Create a variable called 'guess' and save your guess ('heads' or 'tails').
+    // If your guess matches the results, display 'You win!' in the console
+    // If your guess does not match the result, display 'You lose!'
+
+
+    const randomNumber = Math.random();
+    let result;
+
+    if (randomNumber < 0.5) {
+        result = 'heads';
+    } else {
+        result = 'tails';
+    }
+
+    const guess = 'heads';
+
+    if (guess === result) {
+        console.log('You win!');
+    } else {
+        console.log('You loose!');
+    }
+// Instead of using the if statements in the previous exercises, try switching them into ternary operatoes (condition ? A: B).
+  
+     const result = randomNumber < 0.5 ? 'heads': 'tails';
+
+     const guess = 'heads';
+     console.log(guess === result? 'You win!' : 'You loose!');
       
       
       </script>
