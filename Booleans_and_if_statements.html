@@ -91,9 +91,24 @@ console.log(!true);
 
 // Truthy and Falsy values
 
-  if (5) {
+  if (0) {
     console.log('truthy');
   }
+
+  /* Falsy values are 0 '' NaN undefined and Null , any value that is not on the list is a trusthy value*/
+
+    const cartQuantity = 5;
+    if (cartQuantity) {
+      console.log('Cart has products');
+    }
+
+    console.log(!0);
+
+    // NaN not a number
+    console.log('text' / 5);
+    
+    let variable1;
+    console.log(variable1);
 
 
 
