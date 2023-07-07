@@ -8,14 +8,39 @@
 <body>
     <script>
         // Question 7a
-        function greet(){
-            console.log('Hello!');
+        function greet(name){
+            console.log(`Hello ${name}!`);
         }
-        greet();
-        greet();
+        greet('Michael');
+        greet('Barbra');
         
-        // Question 7b
 
+        function greet(name){
+            if (!name){
+                console.log('Hi there!');
+            } else {
+                console.log(`Hello ${name}`);
+            }
+        }
+        greet('Michael');
+        greet('Butterfly');
+        greet();
+
+        function greet(name){
+            console.log(`Hello ${name}!`);
+        }
+        greet('Efrem');
+
+        function greet(name){
+            if (!name){
+                console.log('Hello there!');
+            } else {
+                console.log(`Hello ${name}`);
+            }
+        }
+        // Question 7b
+        // Add a parameter called 'name' to the 'greet' function and display the message:'Hello ${name}!' call the function a few times with different names: greet('Michael');
+        
     </script>
 </body>
 </html>
