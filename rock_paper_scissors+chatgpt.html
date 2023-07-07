@@ -6,23 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Rock paper scissors </title>
   <style>
-    button {
-        background-color: #4db2a3;
+    /* CSS styles */
+    .button {
+      background-color: #4CAF50; /* Green color */
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      display: block;
+      margin: 10px auto;
+      border: none;
+      cursor: pointer;
     }
-    .game {
-        display: flex
-    }
-    .game div {
-        margin: 10px;
-    }
-
   </style>
 </head>
 <body>
-
-    <p > Rock paper and scissors game </p>
   <!-- Rock paper scissors -->
-  <div class="game">    
+  <div>
+    <p> Rock paper and scissors </p>
     <!-- Tip of the game
     Computer randomly selects a move and compares the moves to get the result, which will be displayed in a popup-->
     <!-- The steps above are called an algorithm: An algorithm is a set of steps to complete a task or to solve a problem. The algorithms are then converted into code  -->
@@ -33,29 +34,18 @@
     <!-- Strategies for JavaScript -->
     <!-- Figure out what steps we need to do (algorithm)
     Convert these steps (algorithm) into code -->
-  
+
     <!-- Rock -->
-    <div>
-    <button onclick="playGame('rock')"> Rock </button>
-    <!-- we call the playgame function and we call the pickcomputerMove function 
-    we then go inside the pickComputerMove function and then run all the code inside the pickComputerMovefunction
-    When this function returns it then returns back to where we called it
-    then runs the next and return to the playGame function-->
-    </div>
-  
+    <button class="button" onclick="playGame('rock')"> Rock </button>
+
     <!-- Paper -->
-    <div>
-    <button onclick="playGame('paper')"> Paper </button>
-    </div>
+    <button class="button" onclick="playGame('paper')"> Paper </button>
 
     <!-- Scissors -->
-    <div>
-    <button onclick="playGame('scissors')"> Scissors </button>
-    </div>
+    <button class="button" onclick="playGame('scissors')"> Scissors </button>
+  </div>
 
-    </div>
-    
-    <!-- JavaScript -->
+  <!-- JavaScript -->
   <script>
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -69,7 +59,6 @@
         } else if (computerMove === 'scissors') {
           result = 'Tie';
         }
-
       } else if (playerMove === 'paper') {
         if (computerMove === 'rock') {
           result = 'You win';
@@ -78,7 +67,6 @@
         } else if (computerMove === 'scissors') {
           result = 'You lose';
         }
-
       } else if (playerMove === 'rock') {
         if (computerMove === 'rock') {
           result = 'Tie';
@@ -110,8 +98,5 @@
     }
   </script>
   <!-- End of JavaScript -->
-
-  <!-- In summary
-    Functions let us resuse the code, return=get a value out of a function, parameters = put values into a function,improved the   -->
 </body>
 </html>
