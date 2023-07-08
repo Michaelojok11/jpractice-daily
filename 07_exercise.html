@@ -41,6 +41,58 @@
         // Question 7b
         // Add a parameter called 'name' to the 'greet' function and display the message:'Hello ${name}!' call the function a few times with different names: greet('Michael');
         
+        // 7d create a function 'convertToFarenheit(celsius)' that takes a number in degrees celcius and returns a number in degrees Fahrenheit.
+        // Formula: Fahrenheit = (celcius * 9/5) + 32
+        // ConvertToFahrenheit(25)=>77
+
+        function convertToFahrenheit(celcius){
+            return (celcius * 9/5) + 32;
+        }
+        console.log(convertToFahrenheit(25));
+
+
+        function convertToCelcius(Fahrenheit){
+            return(Fahrenheit-32)*5/9;
+        }
+        console.log(convertToCelcius(86));
+
+
+        // creating a function that converts temperatures degrees and units ('C' or 'F'), and converts it into the other unit.
+        // convertTemperature(25,'C')=>'77F'
+        // convertTemperature(86,'F')=>'30C'
+        // Note: return a tring and try and resuse the functions from 7d and 7e.
+        
+        // function converting to Fahrenheit
+        function convertToFarenheit(celcius){
+            return (celcius *9/5) + 32;
+        }
+
+
+        // function converting to Celcius
+        function convertToCelcius(Fahrenheit){
+            return(Fahrenheit -32 ) * 5/9;
+        }
+
+
+        // function converting Temperatures
+        function convertTemperature(degrees,unit){
+            if (unit === 'C'){
+                const result = convertToFahrenheit(degrees);
+                return `${result}F`;
+            } else if (unit ==='F'){
+                const result = convertToCelcius(degrees);
+                return`${result}C`;
+            }
+        }
+
+        console.log(convertTemperature(25,'C'));
+        console.log(convertTemperature(86,'F'));
+
+        // 
+
+
+
+        
     </script>
 </body>
 </html>
