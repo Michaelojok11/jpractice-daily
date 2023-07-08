@@ -56,13 +56,16 @@
           alert ('The cart is full');
           return;
 
-        } else if (cartQuantity + change < 0) {
-          alert('Not enough items in the cart');
+        } 
 
-        } else {
-          cartQuantity += Mike;
-          console.log(`Cart quantity: ${cartQuantity}`);
-        }
+        if (cartQuantity + change < 0) {
+          alert('Not enough items in the cart');
+          return;
+
+        } 
+
+        cartQuantity += change;
+        console.log(`Cart quantity: ${cartQuantity}`);
       }
     </script>
   </body>
