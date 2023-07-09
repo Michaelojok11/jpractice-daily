@@ -10,6 +10,9 @@
     <!-- An object groups multiple values together -->
 
     <script>
+        /*
+        accessing the values using the dot notation
+
         const product = {
             name: 'socks',
             price: 1090
@@ -38,7 +41,50 @@
         // why we use objects
         // To make our code more organized
         // Allows us to use multiple values together, It also allows us to group multiple values
-        
+        */
+
+        const product2 = {
+            name: 'shirt',
+            ['delivery-time']: '1 day',
+            // nested objects
+            rating: {
+                stars: 45,
+                count: 87,
+            },
+            fun: function function1(){
+                console.log('function inside object');
+            // functions are also values that can be saved in an object
+           }
+
+        };
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+
+
+        console.log(product2.rating.count);
+        product2.fun();
+
+        console.log(typeof console.log);
+
+    //  Math.random() is also a method.
+
+    // Built-in-objects; They are called built in objects because they ar ebuilt in to the language
+    // They are provided by the language
+    // Two more built in objects called JSON and Localstorage
+   
+   
+    // JSON Built-in-Objects
+    
+
+
+
+        // accessing values in the products using the square brackets
+        // It lets us use the properties that dont work with dot notation
+
+
+
     </script>
 </body>
 </html>
