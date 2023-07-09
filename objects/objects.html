@@ -43,6 +43,7 @@
         // Allows us to use multiple values together, It also allows us to group multiple values
         */
 
+        /*
         const product2 = {
             name: 'shirt',
             ['delivery-time']: '1 day',
@@ -96,28 +97,58 @@
     // Next built-in object: Local Storage
     //  -   Save values more permanently 
 
+
+    // Null vs undefined
+    // null = intentionally want something to be empty
+    // 
+    /*
+
+    // Accessing values in the products using the square brackets
+    // It lets us use the properties that dont work with dot notation
+
+    */ 
+//    Objects can have properties and methods
     
+// Autoboxing - Javascript automatically wraps a string in an object
+
+    console.log('hello'.length);
+
+    console.log('hello'.toUpperCase());
 
 
-    
+    // Objects are references
+    const object1 = {
+        message: 'hello'
+    };
+
+    const object2 = object1;
+
+    object1.message = 'Good job!';
+    console.log(object1);
+    console.log(object2);
+
+    // We cant compare objects directly
+
+    const object3 = {
+        message:'Good job!'
+    };
+    console.log(object3===object1);
+    console.log(object2===object1);
+
+    const object4 = {
+        message:'Good job!',
+        price:799
+    };
+
+    // object4.message = object4.message;
+    const{message, price} = object4;
+    console.log(message);
+    console.log(price);
 
 
 
 
 
-
-
-    
-
-
-
-
-
-
-
-
-        // Accessing values in the products using the square brackets
-        // It lets us use the properties that dont work with dot notation
 
 
 

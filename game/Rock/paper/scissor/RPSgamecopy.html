@@ -32,19 +32,35 @@
       <button onclick="playGame('scissors')">Scissors</button>
     </div>
     <div>
-      <button onclick="resetScore()">Reset Score</button>
+      <button onclick="resetScore()
+      localStorage.removeItem('score');
+      ">Reset Score</button>
     </div>
   </div>
   
   <script>
     // Create a variable for our score
-    const score = {
-      wins: 0,
-      losses: 0,
-      ties: 0
+    let score = JSON.parse(localStorage.getItem('score')) || {
+        wins:0,
+        losses:0,
+        ties:0,
     };
-    // convert the string to object using parse
-    console.log(localStorage.getItem('score'));
+
+    /*
+
+    if (!score){
+      score={
+        wins:0,
+        losses:0,
+        ties:0,
+      };
+    }
+    */
+   
+    // Check if score exists in local storage
+    if (!score) {
+      score = { wins: 0, losses: 0, ties: 0 };
+    }
 
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -84,9 +100,10 @@
         score.ties += 1;
       }
 
+      // update the score
       localStorage.setItem('score', JSON.stringify(score));
 
-      // display the results 
+      // Display the results 
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
     }
@@ -110,6 +127,8 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
       score.wins = 0;
       score.losses = 0;
       score.ties = 0;
+
+      localStorage.setItem('score', JSON.stringify(score));
     }
   </script>
 </body>
