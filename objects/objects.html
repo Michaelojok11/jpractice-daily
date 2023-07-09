@@ -55,8 +55,8 @@
                 console.log('function inside object');
             // functions are also values that can be saved in an object
            }
-
         };
+
         console.log(product2);
         console.log(product2.name);
         console.log(product2['name']);
@@ -76,11 +76,47 @@
    
    
     // JSON Built-in-Objects
+    // JSON - Javascript Object Notation, JSON is a syntax, similar to Javascript object
+    // JSON uses double quotes and doesnot support single quotes.
+    // JSON doesnot use functions 
+    // We use JSON when we send data between computers that might use different programming languages
+    // We use JSON when we store data
+
+    // Built-in JSON Object helps us convert Javascript Object to JSON.
+
+    console.log(JSON.stringify(product2));
+    // stringy results in a string
+
+    // converting JSON to javascript
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+    // parse helps us convert the JSON back to Javascript
+
+
+    // Next built-in object: Local Storage
+    //  -   Save values more permanently 
+
+    
+
+
     
 
 
 
-        // accessing values in the products using the square brackets
+
+
+
+
+    
+
+
+
+
+
+
+
+
+        // Accessing values in the products using the square brackets
         // It lets us use the properties that dont work with dot notation
 
 
