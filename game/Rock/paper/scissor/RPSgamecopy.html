@@ -43,7 +43,8 @@
       losses: 0,
       ties: 0
     };
-    console.log(localStorage.getItem('message'));
+    // convert the string to object using parse
+    console.log(localStorage.getItem('score'));
 
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -83,7 +84,7 @@
         score.ties += 1;
       }
 
-      localStorage.setItem('message', 'hello');
+      localStorage.setItem('score', JSON.stringify(score));
 
       // display the results 
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
