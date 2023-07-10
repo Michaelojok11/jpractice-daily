@@ -96,19 +96,99 @@
 
 
     // Lesson 8 exercises
-    // 8a and 8b 
+    // 8a, b and 8c
     const product = {
       name: 'basketball',
       price :2095,
-      ['delivery-time']: '3 days',
+      // ['delivery-time']: '3 days',
    }
    console.log(product)
 
   //  Using the dot notation to increase the price
    product.price += 500;
    console.log(product);
+
+   product['delivery-time'] = '3 days';
+   console.log(product);
+
+  //  Create a function 'comparePrice(product1, product2)', which takes 2 products (with 'name and price properties') and returns the product that is less expensive. Create 2 products and try out the function.
+
+
+  function comparePrice(producta, productb){
+    if (producta.price < productb.price){
+      return producta;
+    } else {
+      return productb;
+    }
+
+  }
+
+  const producta = {
+    name:'basketball',
+    price: 2090
+  };
+
+  const productb = {
+    name: 'dress',
+    price: 1090
+  };
+
+  console.log(comparePrice(producta, productb));
+
    
-  //  8c
+  //  8e
+  /* Create a function 'isSameProduct(product1,product2)', which returns true if 
+  2 products have the same values inside ('name' and 'price'). If not, return false. Create 2 products and try out the function.
+  Hint: objects are references so you cant compare them directly.
+  */
+
+//  function isSameProduct(product1,product2){
+//     if (
+//       product1.name === product2.name &&
+//       product1.price === product2.price
+//     ) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+
+  // Alternatively
+   function isSameProduct(product1, product2){
+    return (
+      product1.name === product2.name &&
+      product1.price === product2.price
+    );
+   }
+
+  // product 1
+   const product1 = {
+    name:'basketball',
+    price: 2090
+  };
+
+  // product 2
+  const product2 = {
+    name: 'dress',
+    price: 1090
+  };
+// product 3 
+const product3 = {
+    name:'basketball',
+    price: 2090
+  };
+
+  console.log(isSameProduct(product1,product2));
+  console.log(isSameProduct(product1, product3));
+
+  // 8f : Using google or an AI tool, search how to convert a string to all lowercase with Javascript ('Good morning' = ' good morning')
+  console.log('GOOD MORNING'.toLowerCase());
+  console.log('MICHAEL'.toLowerCase());
+  console.log('BARBRA'.toLowerCase());
+
+  // Repeating strings
+  console.log('Good morning'.repeat(2));
+  console.log('Michael'.repeat(5));
 
 
 
