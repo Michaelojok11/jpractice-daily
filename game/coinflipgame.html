@@ -33,7 +33,9 @@
             } else {
                 score.losses++;
             }
-            console.log(score);        
+            console.log(score);    
+            
+            localStorage.setItem('score',JSON.stringify(score));
         }
     
         
