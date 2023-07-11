@@ -7,18 +7,48 @@
 </head>
 <body>
 
-    <!-- 9a  -->
+    <!-- 9a and 9b -->
     <button> 9a </button>
     <button class="js-buttonb"> 9b </button>
-    
-    <!-- Heads and tails -->
-    <button class="js-button-head">heads</button>
-    <button class="js-button-tails">tails</button>
-    
 
+    <br>
+    <!-- Heads and tails 9c -->
+    <button style="margin-top: 20px;" onclick="
+    document.querySelector('.js-choice')
+    .innerHTML = 'You chose: heads';
+    ">heads</button>
 
+    <button onclick="
+    document.querySelector('.js-choice')
+    .innerHTML = 'You chose: tails';
+    ">tails</button>
+
+    <p class="js-choice"></p>
+
+    <!-- 9d -->
+
+    <input type="text" placeholder="Name" class="js-name-input" onkeydown="
+    if (event.key ==='Enter'){
+        displayMessage();
+    }
+    ">
+
+    <button onclick="
+   ">Submit</button>
+
+    <p class="js-message"></p>
+
+    <!-- End of 9d -->
 
     <script>
+        // 9d and 9e
+    function displayMessage(){
+    const inputElement = document.querySelector('.js-name-input');
+    document.querySelector('.js-message')
+        .innerHTML = `Your name is ${inputElement.value}`;
+    }
+       
+        
         console.log(document.querySelector('button'));
 
         document.querySelector('.js-buttonb').innerHTML = '9b done!';
