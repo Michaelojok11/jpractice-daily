@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Projects</title>
     <style>
+
+        body {
+        font-family: Arial;
+         }
+
        .subscribe-button{
         border: none;
+        margin-bottom: 30px;
         background-color: black;
         color: white;
-        padding: 10px;
-        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
        }
+
+       .is-subscribed {
+        background-color: rgb(240, 240, 240);
+        color: black;
+       }
+
+       
+
 
     </style>
 </head>
@@ -58,10 +77,15 @@
 
         function subscribe() {
             const buttonElement = document.querySelector('.js-subscribe-button');
-            if (buttonElement.innerHTML === 'Subscribe') {
+            if (buttonElement.innerText === 'Subscribe') {
                 buttonElement.innerHTML = 'Subscribed';
+                // classList add another class to javascript
+            buttonElement.classList.add('is-subscribed');    
+
             } else {
                 buttonElement.innerHTML = 'Subscribe';
+                // To remove the added classList we use classList.remove
+                buttonElement.classList.remove('is-subscribed');
             }
         }
     </script>
