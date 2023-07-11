@@ -15,11 +15,16 @@
 
     <p> Amazon shipping calculator</p>
     <!-- Input is a void element -->
-    <input type="text" placeholder="Cost of order" class="js-cost-input">
+    <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="
+    handleCostKeydown(event);
+   ">
+
+    <!-- clicks, keydowns are known as events, while onclick and onkeydowns = events listeners -->
+
     <button onclick="
     calculateTotal();
-
     ">Calculate</button>
+    <!-- on keydown is another element which runs javascript when we press a key down on our keyboard -->
 
     <p class="js-total-cost"></p>
 
@@ -30,18 +35,40 @@
 
 
     <script>
+
+        // Type coercion, it is not recommended to do math with strings
+        String(25)
+        console.log('25'-5);
+        // Dont do math to strings
+
+        // document object represents the object page and the window object represents the window page
+         window.document
+         window.console.log('window');
+         window.alert()
+        //  window object 
+
+        // Window object
+
+
+
+    function handleCostKeydown(event){
+    console.log(event.key);
+    if (event.key==='Enter'){
+        calculateTotal();
+    }        
+    }
+
         function calculateTotal(){
       const inputElement = document.querySelector('.js-cost-input');
             // input elements we use the value since there is not html elements
-       let cost = Number(inputElement.value);
-       console.log(cost);
+    //   Number element helps to convert the string into numbers because the HTML elements that are obtained 
+    // using the HTML elements are strings.
+
+            let cost = Number(inputElement.value);
        
        if (cost < 40){
         cost = cost + 10;
-        console.log(cost);
-        // Lets check if cost is a number
-        console.log(typeof cost);
-       }
+       } 
         
        // Display the cost on the page
         document.querySelector('.js-total-cost')
@@ -50,10 +77,6 @@
 
     // We need to check if the costs are under 40 dollars if it is, then add 10 dollars
     // 
-
-
-
-
 
         function subscribe(){
         const buttonElement = document.querySelector('.js-subscribe-button');
