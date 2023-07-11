@@ -14,16 +14,42 @@
     " class="js-subscribe-button">Subscribe</button>
 
     <p> Amazon shipping calculator</p>
-    
+    <!-- Input is a void element -->
+    <input type="text" placeholder="Cost of order" class="js-cost-input">
+    <button onclick="
+    calculateTotal();
+
+    ">Calculate</button>
+
+    <p class="js-total-cost"></p>
 
     <!-- Algorithm (Figure out what steps we need then convert them into code)  -->
     <!-- If the text is subscribe, we will change it to subscribed otherwise we will change it back -->
     <!--  -->
-
     <!-- To make the code cleaner we shall save it in a function -->
 
 
     <script>
+        function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');
+            // input elements we use the value since there is not html elements
+       let cost = inputElement.value;\
+       
+       if (cost < 40){
+        cost = cost + 10;
+
+        // Display the cost on the page
+
+
+       }
+    }
+
+    // We need to check if the costs are under 40 dollars if it is, then add 10 dollars
+    // 
+
+
+
+
 
         function subscribe(){
         const buttonElement = document.querySelector('.js-subscribe-button');
