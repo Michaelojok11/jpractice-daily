@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
   <style>
-    button {
+    /* button {
       background-color: #4db2a3;
     }
     .game {
@@ -14,32 +14,34 @@
     }
     .game div {
       margin: 5px;
-    }
+    } */
   </style>
 </head>
 <body>
   <p>Rock, Paper, and Scissors Game</p>
 
   <!-- The buttons -->
-  <div class="game">    
-    <div>
+      
+  
       <button onclick="playGame('rock')">Rock</button>
-    </div>
-    <div>
+
+ 
       <button onclick="playGame('paper')">Paper</button>
-    </div>
-    <div>
+    
+ 
       <button onclick="playGame('scissors')">Scissors</button>
-    </div>
-    <div>
-      <button onclick="resetScore()
-      localStorage.removeItem('score');
-      ">Reset Score</button>
-    </div>
-  </div>
+  
 
   <p class="js-score"></p>
-  
+
+  <!-- Reset score -->
+
+  <button onclick="resetScore()
+      localStorage.removeItem('score');
+      updateScoreElement();
+      ">Reset Score</button>
+      
+
   <script>
     // Create a variable for our score
     let score = JSON.parse(localStorage.getItem('score')) || {
