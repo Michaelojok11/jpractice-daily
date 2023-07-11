@@ -33,15 +33,19 @@
         function calculateTotal(){
       const inputElement = document.querySelector('.js-cost-input');
             // input elements we use the value since there is not html elements
-       let cost = inputElement.value;\
+       let cost = Number(inputElement.value);
+       console.log(cost);
        
        if (cost < 40){
         cost = cost + 10;
-
-        // Display the cost on the page
-
-
+        console.log(cost);
+        // Lets check if cost is a number
+        console.log(typeof cost);
        }
+        
+       // Display the cost on the page
+        document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
     }
 
     // We need to check if the costs are under 40 dollars if it is, then add 10 dollars
