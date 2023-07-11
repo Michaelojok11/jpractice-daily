@@ -13,7 +13,7 @@
       display: flex;
     }
     .game div {
-      margin: 10px;
+      margin: 5px;
     }
   </style>
 </head>
@@ -49,8 +49,7 @@
     };
 
     // Getting the element
-    document.querySelector('.js-score').
-        innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+    updateScoreElement();
     
         // 
 
@@ -108,13 +107,19 @@
       // update the score
       localStorage.setItem('score', JSON.stringify(score));
 
-      document.querySelector('.js-score').
-        innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+      updateScoreElement();
 
       // Display the results 
       alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
     }
+
+    // Lets create a function to resuse the code
+
+    function updateScoreElement(){
+        document.querySelector('.js-score').
+        innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+   }
 
     function pickComputerMove() {
       const randomNumber = Math.random();
