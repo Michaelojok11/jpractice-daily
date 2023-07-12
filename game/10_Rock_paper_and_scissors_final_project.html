@@ -7,7 +7,8 @@
   <title>Rock Paper Scissors</title>
   
   <style>
-  
+
+  /* Rock paper and scissors */
   body{
     background-color:rgb(25, 25, 25);
     color: white;
@@ -19,6 +20,12 @@
     font-weight: bold;
   }
 
+  .move-icon{
+    height:50px;
+       
+  }
+
+
   </style>
 
 </head>
@@ -27,11 +34,11 @@
 
   <!-- The buttons -->
   <button onclick="playGame('rock')">
-     <img src="pictures/rock-emoji.png" alt="">  Rock</button>
+     <img src="pictures/rock-emoji.png" class="move-icon"></button>
 
-  <button onclick="playGame('paper')">Paper</button>
+  <button onclick="playGame('paper')"><img src="pictures/paper-emoji.png" alt="" class="move-icon"></button>
 
-  <button onclick="playGame('scissors')">Scissors</button>
+  <button onclick="playGame('scissors')"><img src="pictures/scissors-emoji.png" alt="" class="move-icon"></button>
   
   <p class="js-result"></p>
   <p class="js-moves"></p>
