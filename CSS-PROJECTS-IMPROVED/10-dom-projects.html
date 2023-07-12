@@ -33,8 +33,14 @@
        }
        /* End of subscribe button */
 
-       /*  */
-
+       /* Amazon shipping calculator */
+       .cost-input {
+        font-size: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+       }
 
              
 
@@ -43,6 +49,7 @@
 </head>
 <body>
 
+    <!-- project 1 -->
     <!-- Start of subscribe button -->
     <p>Youtube Subscribe Button</p>
 
@@ -50,10 +57,11 @@
     
     <!-- End of subscribe button  -->
 
+    <!-- project 2 -->
     <!-- Start of Amazon shipping calculator -->
 
     <p>Amazon Shipping Calculator</p>
-    <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown(event)">
+    <input type="text" placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="handleCostKeydown(event)">
 
     <button onclick="calculateTotal()">Calculate</button>
 
@@ -61,6 +69,7 @@
 
     <!-- End of amazon shipping calculator -->
 
+    <!-- project 3 -->
     <!-- Start of type something -->
     <input type="text" placeholder="Type something" class="js-input" onkeyup="
         const inputElement = document.querySelector('.js-input');
@@ -70,7 +79,6 @@
 
     <!-- End of type something -->
 
-    
 
     <script>
         function handleCostKeydown(event) {
