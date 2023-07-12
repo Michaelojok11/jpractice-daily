@@ -16,12 +16,12 @@
   }
 
   .title {
-    font-family:30px;
+    font-size: 30px;
     font-weight: bold;
   }
 
   .move-icon{
-    height:50px;       
+    height: 50px;       
   }
 
   /* Rock paper and scissors buttons */
@@ -36,6 +36,29 @@
   }
   /* End of Rock Paper and scissors buttons */
 
+  /* Result */
+  .result{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+  /* End of result */
+
+
+  /* score */
+  .score{
+    margin-top: 50px;
+  }
+
+  /* Reset score */
+  .reset-score-button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  /* End of reset score */
 
   </style>
 
@@ -45,21 +68,25 @@
 
   <!-- Buttons Rock Paper and scissors-->
   <button onclick="playGame('rock')" class="move-button">
-     <img src="pictures/rock-emoji.png" class="move-icon" ></button>
+    <img src="pictures/rock-emoji.png" class="move-icon" >
+  </button>
 
-  <button onclick="playGame('paper')" class="move-button"><img src="pictures/paper-emoji.png" alt="" class="move-icon" ></button>
+  <button onclick="playGame('paper')" class="move-button">
+    <img src="pictures/paper-emoji.png" alt="" class="move-icon" >
+  </button>
 
-  <button onclick="playGame('scissors')" class="move-button"><img src="pictures/scissors-emoji.png" alt="" class="move-icon" ></button>
+  <button onclick="playGame('scissors')" class="move-button">
+    <img src="pictures/scissors-emoji.png" alt="" class="move-icon" >
+  </button>
   <!-- End of Rock paper and scissors button -->
   
-  <p class="js-result"></p>
+  <p class="js-result result"></p>
   <p class="js-moves"></p>
-  <p class="js-score"></p>
+  <p class="js-score score"></p>
 
   <!-- Reset score -->
-  <button onclick="resetScore(); localStorage.removeItem('score'); updateScoreElement();">Reset Score</button>
+  <button onclick="resetScore(); localStorage.removeItem('score'); updateScoreElement();" class="reset-score-button">Reset Score</button>
       
-  <!--  -->
   <script>
     // Create a variable for our score
     let score = JSON.parse(localStorage.getItem('score')) || {
@@ -115,7 +142,7 @@
       updateScoreElement();
 
       document.querySelector('.js-result').innerHTML = `Result: ${result}`;
-      document.querySelector('.js-moves').innerHTML = `You: ${playerMove} - Computer: ${computerMove}`;
+      document.querySelector('.js-moves').innerHTML = `You <img src="pictures/${playerMove}-emoji.png" alt="" class="move-icon"> - Computer <img src="pictures/${computerMove}-emoji.png" alt="" class="move-icon">`;
     }
 
     // Let's create a function to reuse the code
@@ -134,6 +161,7 @@
       } else if (randomNumber >= 2/3 && randomNumber < 1) {
         computerMove = 'scissors';
       }
+      
       return computerMove;
     }
 
