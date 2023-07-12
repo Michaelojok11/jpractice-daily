@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Projects</title>
     <style>
-
+    
+    /* body */
         body {
         font-family: Arial;
          }
+         /* End of body CSS */
 
+         /* Subscribe button */
        .subscribe-button{
         border: none;
         margin-bottom: 30px;
@@ -28,17 +31,26 @@
         background-color: rgb(240, 240, 240);
         color: black;
        }
+       /* End of subscribe button */
 
-       
+       /*  */
+
+
+             
 
 
     </style>
 </head>
 <body>
 
+    <!-- Start of subscribe button -->
     <p>Youtube Subscribe Button</p>
 
     <button onclick="subscribe()" class="js-subscribe-button subscribe-button">Subscribe</button>
+    
+    <!-- End of subscribe button  -->
+
+    <!-- Start of Amazon shipping calculator -->
 
     <p>Amazon Shipping Calculator</p>
     <input type="text" placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown(event)">
@@ -47,15 +59,18 @@
 
     <p class="js-total-cost"></p>
 
-    <!--  -->
+    <!-- End of amazon shipping calculator -->
 
-    <!-- <p>Type something:</p> -->
+    <!-- Start of type something -->
     <input type="text" placeholder="Type something" class="js-input" onkeyup="
         const inputElement = document.querySelector('.js-input');
         document.querySelector('.js-message').innerHTML = inputElement.value;
     ">
-
     <p class="js-message"></p>
+
+    <!-- End of type something -->
+
+    
 
     <script>
         function handleCostKeydown(event) {
