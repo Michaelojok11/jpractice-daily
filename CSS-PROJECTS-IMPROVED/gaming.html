@@ -4,29 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Lesson 10 exercises</title>
-    <style>
-    
-        /*toggle-button */
-        .toggle-button {
-            background-color: rgb(230, 230, 230);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-size: 15px;
-            cursor: pointer;
-        }
-        .is-toggled{
-            background-color: black;
-            color: white;
-        }
-
-    </style>
-
+   <link rel="stylesheet" href="gaming.css">
 </head>
 <body>
-
-    
+       
      <!-- 10d -->
      <!-- Gaming -->
      <button class="toggle-button js-button" onclick="
@@ -44,15 +25,8 @@
      toggleButton('.js-button-3');
      ">Tech</button>
 
-    <script src="">
-    function toggleButton(selector){
-        const button = document.querySelector(selector);
-        if (!button.classList.contains('is-toggled')){
-            button.classList.add('is-toggled');
-        } else {
-            button.classList.remove('is-toggled');
-        }
-    }
+    <script src="gaming.js">
+
     </script>
 </body>
 </html>
