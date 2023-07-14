@@ -6,77 +6,112 @@
     <title>DOM Projects</title>
     <style>    
     /* body */
+    body{
+        font-family: Arial;
+        font-size: 10px;
+        background-color: black;
+    }
+    /* End of body */
+    .gray-button {
+        background-color: gray;
+        color: white;
+    }
+    .orange-button{
+        background-color: orange;
+        color: white;
+    }
+    .calculator-button {
+        height: 60px;
+        width: 60px;
+        border-radius: 60px;
+        border: none;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    /* calculation-results */
+    .calculation-results{
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+    .clear-button {
+        font-size: 15px;
+    }
+
+
        
     </style>
 </head>
   <body>
     <!-- Create an element to display the calculation. -->
-    <p class="js-calculation"></p>
+    <p class="js-calculation calculation-results"></p>
 
     <p>
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('1');
       ">1</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('2');
       ">2</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('3');
       ">3</button>
 
-      <button onclick="
+      <button class="orange-button calculator-button" onclick="
         updateCalculation(' + ');
       ">+</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('4');
       ">4</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('5');
       ">5</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('6');
       ">6</button>
 
-      <button onclick="
+      <button  class="orange-button calculator-button" onclick="
         updateCalculation(' - ');
       ">-</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('7');
       ">7</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('8');
       ">8</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('9');
       ">9</button>
 
-      <button onclick="
+      <button class="orange-button calculator-button" onclick="
         updateCalculation(' * ');
       ">*</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="gray-button calculator-button"  onclick="
         updateCalculation('0');
       ">0</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         updateCalculation('.');
       ">.</button>
 
-      <button onclick="
+      <button class="gray-button calculator-button" onclick="
         calculation = eval(calculation);
         
         // Display the calculation on the page
@@ -85,13 +120,13 @@
         localStorage.setItem('calculation', calculation);
       ">=</button>
 
-      <button onclick="
+      <button class="orange-button calculator-button" onclick="
         updateCalculation(' / ');
       ">/</button>
     </p>
 
     <p>
-      <button onclick="
+      <button class="clear-button gray-button calculator-button" onclick="
         calculation = '';
         
         // Display the calculation on the page
