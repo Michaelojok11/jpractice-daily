@@ -4,45 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Projects</title>
-    <style>    
-    /* body */
-    body{
-        font-family: Arial;
-        font-size: 10px;
-        background-color: black;
-    }
-    /* End of body */
-    .gray-button {
-        background-color: gray;
-        color: white;
-    }
-    .orange-button{
-        background-color: orange;
-        color: white;
-    }
-    .calculator-button {
-        height: 60px;
-        width: 60px;
-        border-radius: 60px;
-        border: none;
-        margin-right: 5px;
-        cursor: pointer;
-    }
-
-    /* calculation-results */
-    .calculation-results{
-        color: white;
-        margin-top: 20px;
-        margin-bottom: 15px;
-        font-size: 40px;
-    }
-    .clear-button {
-        font-size: 15px;
-    }
-
-
-       
-    </style>
+    <link rel="stylesheet" href="calculator.css">
 </head>
   <body>
     <!-- Create an element to display the calculation. -->
@@ -136,26 +98,8 @@
       ">Clear</button>
     </p>
 
-    <script>
-      let calculation = localStorage.getItem('calculation') || '';
-
-      // Display the calculation when the page first loads.
-      displayCalculation();
-
-      function updateCalculation(value) {
-        calculation += value;
-
-        // Display the calculation on the page
-        // instead of console.log
-        displayCalculation();
-
-        localStorage.setItem('calculation', calculation);
-      }
-
-      function displayCalculation() {
-        document.querySelector('.js-calculation')
-          .innerHTML = calculation;
-      }
+    <script src="calculator.js">
+      
     </script>
   </body>
 </html>
