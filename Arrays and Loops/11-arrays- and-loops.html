@@ -148,6 +148,7 @@
     }
     */
 
+    /*
     // Arrays are References
     const array1 = [1,2,3];
     const array2 = array1.slice();
@@ -184,22 +185,28 @@
         i++;
     }
 
-
+*/
 
     
     // How to use loops with functions
-  function doubleArray(){
-    const nums = [1,1,3];
+  function doubleArray(nums){
+    // const nums = [1,1,3];
     const numsDoubled = [];
-    const numsDoubled = [];
+    
   for (let i=0; i <nums.length; i++){
     const num = nums[i];
+    if (num===0){
+        return numsDoubled;
+    }
     numsDoubled.push(num * 2);
   }  
   console.log(numsDoubled);
   }
+ console.log(doubleArray([1,1,3]));
+ console.log(doubleArray([2,2,5,0,5]));
   
-  
+// Arrays is a list of values
+/* Loops (while loop, for loop), accumulator loop, 
  
 
 
