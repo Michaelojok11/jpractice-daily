@@ -7,7 +7,10 @@
 </head>
 <body>
 
-    <p></p>
+    <p id="demo"></p>
+    <p id="calculation"></p>
+    <!-- converting fahrenheit to Celcius -->
+    <p id="fahrenheit-to-celcius"></p>
 
     <script>
         // javascript functions
@@ -16,8 +19,38 @@
         function myFunction(p1,p2){
             return p1*p2;
         }
+        //  
+        let result = myFunction (4,3);
+        document.getElementById("demo").innerHTML = result;
 
-        // 
+        // function parameters are listed inside the parentheses () in the function.
+
+
+        // Function Return
+        let x = myFunction(4,3);
+        document.getElementById("calculation").innerHTML = x;
+
+        function myFunction(a,b){
+            return a*b;
+        }
+
+        // convert fahrenheit to Celcius 
+        function toCelcius(f){
+            return (5/9)*(f-32);
+        }
+         let value = toCelcius(77);
+         document.getElementById("fahrenheit-to-celcius").innerHTML = value;
+
+        //  Accessing a function with incorrect parameters can return an incorrect answer
+
+        // functions can be used to store the variable values
+
+        function toC(f){
+            return (5/9)*(f-32);
+        }
+        let text = "The temperature is" + toC(77) + "Degree Celcius.";
+        document.getElementById("demo").innerHTML = text;
+        
 
     </script>
     
