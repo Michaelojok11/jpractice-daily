@@ -11,6 +11,18 @@
     <p id="calculation"></p>
     <!-- converting fahrenheit to Celcius -->
     <p id="fahrenheit-to-celcius"></p>
+    <!-- Object elements -->
+    <p id="object-car"></p>
+    <p id="object-people"></p>
+
+    <!-- Events -->
+    <element event="some javascript"> </element>
+
+    <!-- button -->
+    <button onclick="document.getElementById('time').innerHTML=Date()"> The time is ? </button>
+    <p id="time"></p>
+    <button onclick="
+    this.innerHTML=Date()"> The time is ?</button>
 
     <script>
         // javascript functions
@@ -51,6 +63,37 @@
         let text = "The temperature is" + " "+ toC(77) +" " + "Degree Celcius.";
         document.getElementById("demo").innerHTML = text;
 
+        // Javascript objects
+        const car = {type:"Mercedes", model:"2023", color:"white"};
+
+        // Display some data from the object:
+        document.getElementById("object-car").innerHTML = "The car type is " + car.type;
+
+        // Object methods
+        // Objects can also have methods
+        // Methods are actions that can be performed on objects
+        // Methods are stored in properties as function definitions.
+
+        // 
+
+        const people = {
+            firstName: "Michael",
+            lastName: "Ojok",
+            id: 5555,
+            fullName: function(){
+                return this.firstName + " " + this.lastName;
+                
+            }            
+        }
+        document.getElementById("object-people").innerHTML = people.fullName();
+        
+
+        // Accessing object Methods; You can access an object with the following syntax.
+        // 
+
+        // Javascript Events
+        // Events are things that happen to HTML elements.
+        
 
     </script>
     
