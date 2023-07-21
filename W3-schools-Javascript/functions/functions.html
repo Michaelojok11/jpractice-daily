@@ -15,16 +15,63 @@
     <p id="object-car"></p>
     <p id="object-people"></p>
 
+    <p id="display-date"></p>
+
     <!-- Events -->
     <element event="some javascript"> </element>
 
+    <!-- Common HTML Events -->
+    <!-- 
+        onchange- An HTML element has been changed
+        onclick - The user clicks an HTML element
+        onmouseover - The user moves the mouse over an HTML element
+        onmouseout - The user moves the mouse away from an HTML element
+        onkeydown - The user pushes a keyboard key
+        onload - The browser has finished loading the page
+
+     -->
+
+     <!-- Javascript event handlers -->
+
+     <!-- string -->
+     <!-- 
+        string.length
+
+      -->
+      <p id="text-string"></p>
+
+
+
     <!-- button -->
-    <button onclick="document.getElementById('time').innerHTML=Date()"> The time is ? </button>
-    <p id="time"></p>
-    <button onclick="
-    this.innerHTML=Date()"> The time is ?</button>
+    <!-- <button onclick="document.getElementById('time').innerHTML=Date()"> The time is ? </button>
+    <p id="time"></p> -->
+    
+    <!-- <button onclick="
+    this.innerHTML=Date()"> The time is ?</button> -->
+
+    <!--  -->
+    <!-- <button onclick="displayDate()"> The time is ?</button> -->
+
 
     <script>
+
+        // 
+        let text = "We are from \"Gulu\" \
+        Northern Uganda.";
+        document.getElementById("text-string").innerHTML = 
+        text;
+
+
+
+
+        // 
+
+/*
+        function displayDate(){
+            document.getElementById("display-date").innerHTML = Date();
+        }
+        */
+/*
         // javascript functions
         // Javascript function is a blockof code designed to perform a particular task.
         // A javascript is executed when "something" invokes it(calls it).
@@ -93,6 +140,7 @@
 
         // Javascript Events
         // Events are things that happen to HTML elements.
+        */
         
 
     </script>
