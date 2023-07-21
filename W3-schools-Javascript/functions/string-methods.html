@@ -15,13 +15,17 @@
     -   substring (start, end)
     -   substr (start, length) -->
 
-        
+    <!-- replace () -->
 
-
-
-
+        <button onclick="myFunction()">Try it </button>
+        <p id="todo-michael"> Please visit Microsoft</p>
 
     <script>
+        function myFunction(){
+            let text = document.getElementById("todo-michael").innerHTML;
+            document.getElementById("todo-michael").innerHTML = 
+            text.replace(/MICROSOFT/i, "W3Schools");
+        }
 
 
     </script>
