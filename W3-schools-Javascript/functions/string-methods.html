@@ -57,22 +57,31 @@
 
 
         <!-- String search -->
+
+        <!-- indexOf() -->
         <p id="index"></p>
+        <p id="index-text"></p>
+
+         <!-- String lastIndexOf()
+        -   returns the position of the first occurence of a string in a string. -->
+        
+        <!-- Search()
+        -     -->
 
 
-
-
-        <!--  -->
     <script>
 
         // String Search 
+        // indexOf()- 
 
-        // indexOf()- returns the position of the first occurence of a string in a string.
-        
         let textIndex = "Please locate where 'locate' occurs!";
         let index = textIndex.indexOf("locate");
         document.getElementById("index").innerHTML = index;
 
+        // String lastIndexOf()
+        let textIndex1 = "Please locate where 'locate' occurs!";
+        let index1 = textIndex1.lastIndexOf("locate");
+        document.getElementById("index-text").innerHTML = index1;
 
 
 
