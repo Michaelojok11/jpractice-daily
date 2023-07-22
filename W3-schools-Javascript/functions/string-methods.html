@@ -27,6 +27,13 @@
     <!-- Javascript string to UpperCase()
 
     -->
+
+    <!-- trim()- removes the whitespace
+    -   trim() 
+    -   trim(start)
+    -   -->
+
+    <!-- padstart -->
     <button onclick="toUppertext()">Find the attached below </button>
     <p id="text-func"> Hello World! </p>
 
@@ -34,13 +41,21 @@
         <p id="todo-michael"> Please visit Microsoft</p>
 
         <p id="concat-text"></p>
+        <p id="pad"></p>
 
     <script>
+        // 
+        let numb = 5;
+        let text = numb.toString();
+        document.getElementById("pad").innerHTML = text.padStart(4,0);
 
+
+
+// 
         let text1 = "Hello";
         let text2 = "World!";
         let text3 = text1.concat(" ", text2);
-        document.getElementById("demo").innerHTML = text3;
+        document.getElementById("concat-text").innerHTML = text3;
 
 
         function toUppertext(){
