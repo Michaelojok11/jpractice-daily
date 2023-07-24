@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions </title>
+</head>
+<body>
+
+    <script>
+        // 
+        function greeting (){
+            console.log('hello');
+        }
+        // calling the function 
+        greeting();
+
+        // functions are values
+        // we can save values in variables
+        const num = 2;
+        // We can save a
+        const function1 = function greeting(){
+            console.log("hello2");
+        };
+        // Anonymous function is a function without a name
+
+        console.log(function1);
+        console.log(typeof function1);
+        function1();
+
+        const object1 = {
+            num: 2,
+            fun: function(){
+                console.log('hello3');
+            }
+        };
+        object1.fun();
+
+
+    </script>
+    
+</body>
+</html>
