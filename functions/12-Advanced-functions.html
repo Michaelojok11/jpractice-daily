@@ -9,6 +9,7 @@
 
     <script>
         // 
+        /*
         function greeting (){
             console.log('hello');
         }
@@ -35,6 +36,45 @@
             }
         };
         object1.fun();
+
+        // passing a value into a function 
+
+        function display(param){
+            console.log(param);
+        }
+        display(2);
+
+
+        // Passing a function into another function 
+        function run(param){
+            param();
+        }
+        run(function(){
+            console.log('hello4');
+        });
+        // 
+        function michael(barbra){
+                  barbra();      
+        }
+        michael(function(){
+            console.log('hello5');
+        })
+        */
+        // set timeout 
+        // Allows us run a function in the future
+        
+        setTimeout(function(){
+            console.log('timeout');
+            console.log('timeout2')
+        }, 3000);
+        // The second parameter is how long to wait before running this function
+        // (A number in milliseconds, 1000 milliseconds = 1 second)
+
+
+        // Asynchronous code; means that it wont wait for the code to finish before going to the next line
+        
+        console.log('next line');
+
 
 
     </script>
