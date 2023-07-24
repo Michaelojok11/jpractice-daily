@@ -87,6 +87,14 @@
   <!-- Reset score -->
   <button onclick="resetScore(); localStorage.removeItem('score'); updateScoreElement();" class="reset-score-button">Reset Score</button>
       
+   <!-- Autoplay button -->
+   <button class="auto-play-button"> Auto play  </button>
+  
+   <!-- end of autoplay button -->
+
+
+
+   
   <script>
     // Create a variable for our score
     let score = JSON.parse(localStorage.getItem('score')) || {
