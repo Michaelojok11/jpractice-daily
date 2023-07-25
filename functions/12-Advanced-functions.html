@@ -7,8 +7,40 @@
 </head>
 <body>
 
+    <button onclick="" class="js-button"> Click </button>
+
     <script>
+        
         // 
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => {
+            console.log('click');
+        };
+        buttonElement.addEventListener('click', eventListener);
+        
+
+
+        buttonElement.addEventListener('click', () => {
+            console.log('click');
+            // addEvent listeners lets us add multiple event listeners for an event
+        });
+
+        // remove eventListener
+        buttonElement.removeEventListener('click', );
+
+        buttonElement.addEventListener('click', () => {
+            console.log('click2');
+            // addEvent listeners lets us add multiple event listeners for an event
+        });
+
+
+
+
+
+
+
+
         /*
         function greeting (){
             console.log('hello');
@@ -60,9 +92,11 @@
             console.log('hello5');
         })
         */
+
+
         // set timeout 
         // Allows us run a function in the future
-        
+        /*
         setTimeout(function(){
             console.log('timeout');
             console.log('timeout2')
@@ -83,6 +117,55 @@
 
         console.log('next line 2');
         // 
+        */
+
+
+        // How to loop through an array
+        // forEach method
+
+        /*
+
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube',
+        ].forEach(function(value, index){
+            
+            if (value==='wash dishes'){
+                return;
+            }
+            console.log(index);
+            console.log(value);
+        });
+
+        // for each dont have continue but it uses return
+
+
+        // Arrow functions
+        const arrowFunction =() => {
+            console.log('hello');
+        };
+        arrowFunction()
+        // shortcuts of the arrow functions
+        const oneParam = param => {
+            console.log(param + 1);
+        };
+        oneParam(2);
+
+        // 
+        // const oneLine = () => 2 +3 ;
+        // console.log(oneLine);
+        
+        const object2 = {
+            method: () => {
+
+            },
+            method(){
+
+            }
+        };
+        */
+
 
 
 

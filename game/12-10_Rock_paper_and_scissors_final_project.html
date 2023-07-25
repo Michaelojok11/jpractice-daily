@@ -51,7 +51,8 @@
   }
 
   /* Reset score */
-  .reset-score-button{
+  .reset-score-button,
+  .auto-play-button {
     background-color: white;
     border: none;
     font-size: 15px;
@@ -88,14 +89,48 @@
   <button onclick="resetScore(); localStorage.removeItem('score'); updateScoreElement();" class="reset-score-button">Reset Score</button>
       
    <!-- Autoplay button -->
-   <button class="auto-play-button"> Auto play  </button>
+   <button class="auto-play-button" onclick="
+    autoPlay();
+   "> Auto play  </button>
   
    <!-- end of autoplay button -->
 
 
 
-   
+
   <script>
+    document.body.addEventListener('keydown',(event) => {
+      if (event.key === 'r'){
+        playGame('rock');
+      } else if (event.key=== 'p'){
+        playGame('paper');
+      } else if (event.key==='s'){
+        playGame('scissors');
+      }
+    })
+
+
+
+let isAutoPlaying = false;
+let intervalId;
+
+    // autoplay function 
+    function autoPlay(){
+      if (!isAutoPlaying){
+      intervalId = setInterval(function(){
+        const playerMove = pickComputerMove();
+        playGame(playerMove);
+
+      }, 1000);
+      
+      isAutoPlaying = true;
+
+      } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;        
+      }     
+    }
+
     // Create a variable for our score
     let score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
