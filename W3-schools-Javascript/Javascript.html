@@ -61,6 +61,8 @@
 
     <p id="templates"></p>
 
+    <p id="dating"></p>
+
 
     <script>
 
@@ -140,7 +142,22 @@
         // Javascript numbers
         // javascript tries to convert strings to numbers when multiplying and subtracting numbers
         // NaN is not a legal number Not a Number
-        
+
+    // comparing two javascript objects always return false
+    //  Javascript BigInt variables are used to store big integer values that are too big to be represented by a normal Javascript Number.
+
+
+    // Javascript Number methods
+    // - tpString returns a numbers as a string
+    // - toExponential() returns a number written with a number of decimals
+    // - toPrecision() - returns a number written with a specified length
+    // - valueOf() - returns a number as a number
+    
+
+    // 
+    let x = new Date("2023-07-31");
+    document.getElementById('dating').innerHTML = Number(x);
+   
 
 
     </script>
