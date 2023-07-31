@@ -6,8 +6,54 @@
     <title>Arrays</title>
 </head>
 <body>
-    <p> An array is a special variable which can holdmore than one value </p>
 
-    
+    <P id="vehicle-brand"></P>
+
+    <p id="fruity-loop"></p>
+
+    <p id="fruity-loop-now"></p>
+   
+
+ <script>
+    //  <p> An array is a special variable which can holdmore than one value </p>
+
+       const cars = ["Saab", "Volvo", "BMW"];
+       document.getElementById("vehicle-brand").innerHTML = cars;
+
+       const cars1 = new Array("Saab", "Volvo", "BMW")
+
+    //    Looping through array elements
+    // Looping using a for loop
+
+    const fruits = ["Banana","Orange","Apple","Mango"];
+    let fLen = fruits.length;
+
+    let text = "<ul>";
+      for (let i = 0; i <fLen; i++){
+         text += "<li>" + fruits[i] +"</li>";
+      }
+      text += "</ul>";
+
+      document.getElementById("fruity-loop").innerHTML = text;
+
+
+      // The forEach method call a function for each element.
+      // 
+
+      let fruits = ["Banana","Orange","Apple","Mango"];
+      let text = "<ul>";
+         fruits.forEach(myFunction);
+         text += "</ul>";
+         document.getElementById("fruity-loop-now").innerHTML = text;
+
+         function myFunction(value){
+            text += "<li>" + value + "</li>";
+         }
+
+
+
+ </script>
+
+
 </body>
 </html>
