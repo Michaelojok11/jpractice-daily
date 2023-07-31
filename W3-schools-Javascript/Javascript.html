@@ -54,6 +54,14 @@
     <p id="demo"></p>
     <p id="calculate"></p>
     <p id="text-type"></p>
+    <p id="mikey"></p>
+
+    <p id="fullName"></p>
+    <p id="totalAmount"></p>
+
+    <p id="templates"></p>
+
+
     <script>
 
         // object
@@ -89,6 +97,52 @@
         let text1 = "What a very";
         text1 += ' nice day';
         document.getElementById("calculate").innerHTML=text1; 
+
+        // back-tics syntax
+        // Template literals
+        let michael = `Hello Mummy!`;
+        document.getElementById("mikey").innerHTML = michael;
+        // Advantages of interpolation
+        // -    template literals allows multiline strings
+        // -    Template literals provide an easy way to interpolate vartiables and expressions into strings
+        // - The method is called string interpolation
+        // - It allows variables in strings
+        let myName = 'Michael';
+        let lastName = 'Ojok';
+
+        let texting = `welcome ${myName}, ${lastName}!`;
+        document.getElementById('fullName').innerHTML= texting;
+
+        // string interpolation is the automatic replacing of variables with real values
+       
+       
+        // string interpolation allow expressions in strings
+        let price = 10;
+        let VAT = 0.25;
+        
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById('totalAmount').innerHTML = total;
+
+        // HTML Templates
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+
+        for (const x of tags) {
+        html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+            document.getElementById('templates').innerHTML = html;
+
+        // Javascript numbers
+        // javascript tries to convert strings to numbers when multiplying and subtracting numbers
+        // NaN is not a legal number Not a Number
+        
+
+
     </script>
 </body>
 </html>
