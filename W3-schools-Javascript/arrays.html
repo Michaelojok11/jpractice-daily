@@ -12,6 +12,9 @@
     <p id="fruity-loop"></p>
 
     <p id="fruity-loop-now"></p>
+
+    <button onclick="myFunction()"> Try it </button>
+    <p id="fruity-mike"></p>
    
 
  <script>
@@ -25,6 +28,8 @@
     //    Looping through array elements
     // Looping using a for loop
 
+    /*
+
     const fruits = ["Banana","Orange","Apple","Mango"];
     let fLen = fruits.length;
 
@@ -36,6 +41,7 @@
 
       document.getElementById("fruity-loop").innerHTML = text;
 
+      
 
       // The forEach method call a function for each element.
       // 
@@ -49,6 +55,18 @@
          function myFunction(value){
             text += "<li>" + value + "</li>";
          }
+*/
+         // Adding array elements
+         // push() method
+
+         const fruities = ["Banana", "Orange","Apple"];
+         document.getElementById("fruity-mike"),innerHTML = fruities;
+
+         function myFunction(){
+            fruities.push("Lemon");
+            document.getElementById("fruity-mike").innerHTML = fruities;
+         }
+
 
 
 
