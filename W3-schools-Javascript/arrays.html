@@ -24,6 +24,10 @@
     <p id="fruity-reverse"></p>
 
     <p id="fruity-reverse-2"></p>
+
+    <p id="points-array"></p>
+
+    <p id="points-array-2"></p>
    
 
  <script>
@@ -121,6 +125,16 @@
       fruits.reverse();
       document.getElementById("fruity-reverse-2")
 
+      // Numeric sort
+      // Numeric sort () using a compare function
+
+      const points = [40,100,1,5,25,10];
+      document.getElementById("points-array").innerHTML = points;
+
+      points.sort(function(a,b){return a-b});
+      document.getElementById("points-array-2").innerHTML = points;
+
+      
 
       
 
