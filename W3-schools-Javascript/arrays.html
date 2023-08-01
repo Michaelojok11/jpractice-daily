@@ -15,6 +15,10 @@
 
     <button onclick="myFunction()"> Try it </button>
     <p id="fruity-mike"></p>
+
+    <p id="demo-mike-fruits"></p>
+
+    <p id="demo-mike-fruits-1"></p>
    
 
  <script>
@@ -69,7 +73,28 @@
 
 
          // When to use arrays. When to use objects
-         //  
+         // You should use objects when you want the element names to be strings (text).
+         // You should use arrays when you want the element names to be numbers.
+           
+
+         // Javascript methods
+
+         // Javascript array length, returns the length of an array
+
+         // Array to string(), converts an array to a string
+
+         // The join() method, joins an array elements into a string.
+
+         const mikeyFruits = ["Banana", "Apple","Orange","Mango"];
+         document.getElementById("demo-mike-fruits").innerHTML = mikeyFruits.join(" * ");
+         mikeyFruits.pop();
+         document.getElementById("demo-mike-fruits-1").innerHTML = mikeyFruits;
+
+
+      // Popping and pushing
+      // popping items out of an array, pushing items into an array
+      
+      
 
 
 
