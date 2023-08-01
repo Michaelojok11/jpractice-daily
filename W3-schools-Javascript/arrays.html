@@ -28,6 +28,11 @@
     <p id="points-array"></p>
 
     <p id="points-array-2"></p>
+
+
+    <button  onclick="myFunction1()"> Sort Alphabetically </button>
+    <button  onclick="myFunction2()"> Sort Numerically </button>
+      <p id="pointing-function"></p>
    
 
  <script>
@@ -71,6 +76,7 @@
 */
          // Adding array elements
          // push() method
+         /*
 
          const fruities = ["Banana", "Orange","Apple"];
          document.getElementById("fruity-mike"),innerHTML = fruities;
@@ -124,7 +130,7 @@
       fruits.sort();
       fruits.reverse();
       document.getElementById("fruity-reverse-2")
-
+         */
       // Numeric sort
       // Numeric sort () using a compare function
 
@@ -134,7 +140,19 @@
       points.sort(function(a,b){return a-b});
       document.getElementById("points-array-2").innerHTML = points;
 
-      
+      // 
+      const pointing = [40,100,1,5,25,10];
+      document.getElementById("pointing-function").innerHTML = pointing;
+
+      function myFunction1(){
+         pointing.sort();
+         document.getElementById("pointing-function").innerHTML = pointing;
+      }
+
+      function myFunction2(){
+         pointing.sort(function(a,b){return a-b});
+         document.getElementById("pointing-function").innerHTML = pointing;
+      }
 
       
 
