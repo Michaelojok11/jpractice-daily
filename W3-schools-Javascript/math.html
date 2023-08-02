@@ -11,7 +11,13 @@
     <p id="round"></p>
     <p id="round-1"></p>
     <p id="round-2"></p>
+    <p id="round-up-1"></p>
+    <p id="round-up-2"></p>
 
+    <input id="age" value="">
+    <button onclick="myFunction()"> Try it </button>
+    <p id="aging"></p>
+    
     <script>
         // Methods to round a number
         // Math.round() -  returns the nearest integer
@@ -22,6 +28,40 @@
         document.getElementById("round-2").innerHTML = Math.floor(-4.2);
         // Math.trunc() - returns the integer part of x
         document.getElementById("round-up").innerHTML = Math.trunc(-4.5);
+        // Math.sign() -  returns if x is negative,null or positive;
+        document.getElementById("round-up-1").innerHTML = Math.sign(-4.5);
+        //Math.pow(x,y) - returns the value of x to the power of y:
+        document.getElementById("round-up-2").innerHTML = Math.pow(8,2);
+        // Math.sqrt(x) - returns the square root of x;
+
+        // Math.abs() - returns the absolute positive value of x;
+
+        // Math.sin() - returns the sine 
+
+        // Math.cos() -returns the cosine
+
+        // Math.min() - can be used to find the lowest value in a list or arguments
+
+        // Math.max() - can be used to find the highest value in a list or arguments
+
+        // Math.random () - returns the number between 0 (inclusive) and 1 (inclusive)
+
+        // Math.log(x) - returns the natural logarithm of x.
+
+        // Math.log2(x) - returns the base 2 logarithm of x.
+
+
+        // comparison or logical operators
+        // comparison and logical operators are used to test for true or false 
+        // comparison operators
+
+        function myFunction() {
+            let age = document.getElementById("age").value;
+            let voteable = (age < 18) ? "Too young" : "Old enough";
+            document.getElementById("aging").innerHTML = voteable +  " " + "to vote";
+        }
+
+
 
     </script>
 </body>
