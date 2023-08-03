@@ -9,13 +9,69 @@
 
     <p id="mike-date"></p>
 
-    <script>
-        if (new Date().getHours() < 18){
-            document.getElementById("mike-date").innerHTML = "Good day!";
-        } else {
-            greeting = "Good evening";
-        }
+    <p id="day-of-week"></p>
+    
+    <p id="texting-day"></p>
 
+    <script>
+        // else , else if , else statement
+       const time = new Date().getHours();
+       let greeting;
+       if (time < 10){
+        greeting = "Good morning";
+       } else if (time < 20){
+        greeting = "Good day";
+       } else {
+        greeting = "Good evening";
+       }
+       document.getElementById("mike-date").innerHTML = greeting;
+
+    //    switch statement
+    // switch statement is used to select one of many code blocks to be executed
+
+    let day;
+    switch (new Date().getDay()){
+        case 0:
+            day = "sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+    }
+
+    document.getElementById("day-of-week").innerHTML = "Today is " + day;
+
+
+    // switch examples
+
+    let textDay;
+    switch(new Date().getDay()){
+        case 4:
+        case 5:
+            textDay = "Soon it is weekend";
+            break;
+        case 0: 
+        case 6: 
+            textDay = "It is weekend"; 
+            break;
+            default: 
+            textDay = "Looking forward to the Weekend";
+    } 
+    document.getElementById("texting-day").innerHTML = textDay;
 
     </script>
     

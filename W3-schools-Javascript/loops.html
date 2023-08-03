@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loops </title>
+</head>
+<body>
+
+    <!-- for loops -->
+    <!-- loops can execute a block of code a number of times -->
+    <p id="car-types"></p>
+
+    <script>
+
+        // For Loop
+        // The for statement creates a loop with 3 optional expressions
+        //  for (expression 1; expression 2; expression 3) { code to be executed}
+        // Expression 1- is executed (one time) before the execution of the code block, it initializes the variable used in the loop
+        // Expression 2 - defines the condition for executing the code block
+        // Expression 3 - is executed (everytime) after the code block has been executed.
+
+
+        const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        
+        let text = "";
+        for (let i = 0; i < cars.length; i++){
+            text +=cars[i] + "<br>";
+        }
+        document.getElementById("car-types").innerHTML = text;
+        
+    </script>
+    
+</body>
+</html>
