@@ -14,9 +14,13 @@
     <p id="round-up-1"></p>
     <p id="round-up-2"></p>
 
+    <!-- 
     <input id="age" value="">
     <button onclick="myFunction()"> Try it </button>
     <p id="aging"></p>
+     -->
+
+
     
     <script>
         // Methods to round a number
@@ -54,12 +58,29 @@
         // comparison or logical operators
         // comparison and logical operators are used to test for true or false 
         // comparison operators
+        /*
 
         function myFunction() {
             let age = document.getElementById("age").value;
             let voteable = (age < 18) ? "Too young" : "Old enough";
             document.getElementById("aging").innerHTML = voteable +  " " + "to vote";
         }
+        */
+        // To secure a proper result, variables should be converted to the proper type before comparison:
+
+        // Javascript if, else, and else if
+        // Conditional statements are used to perform different actions based on different conditions
+        // if - to specify a block of code to be executed, if a specified condition is true
+        // else - To specify a block of code to be executed, if the same condition is false
+        // else if - to specify a new conditon to test, if the first ondition is false
+        // switch - to specify many alternatives blocks of code to be executed
+
+
+        if (new Date().getHours() < 18){
+            document.getElementById("mike-date").innerHTML = "Good day!";
+        }
+
+
 
 
 
