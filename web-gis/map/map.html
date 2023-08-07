@@ -1,14 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web-gis-map</title>
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
 
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <!-- css arcgis -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css">
+   
+  </head>
+  <body>
+
+    <p>Hello</p>
+    <!-- step 2 is to reference the api -->
     
-    <script src="map.js"></script>
+    <div id="viewDiv"></div>
+
+    <!-- javascript -->
+    <script src="https://js.arcgis.com/4.27/"></script>
     
-</body>
+   
+    <script>
+        require(["esri/config", "esri/Map", "esri/views/MapView","esri/layers/FeatureLayer"], 
+        function(esriConfig, Map, MapView, FeatureLayer) {
+            // esriConfig.apiKey = "YOUR_API_KEY";
+
+        const map = new Map({
+          basemap: "hybrid" // Basemap layer service
+        });
+
+        // Adding trailheads feature layer 
+            const trailheadsLayer = new FeatureLayer({
+        url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0"
+    });
+
+    map.add(trailheadsLayer);
+
+        // create a map view
+
+        const view = new MapView({
+          map: map,
+          center: [-118.805, 34.027], // Longitude, latitude
+          zoom: 13, // Zoom level
+          container: "viewDiv" // Div element
+        });
+        // End of view
+
+          });
+      </script>
+    
+  </body>
 </html>
