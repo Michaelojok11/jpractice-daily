@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-API</title>
+</head>
+<body>
+
+    <!-- A web API is 
+    - used to extend the functionality of the browser
+    - It can be greatly simplify complex functions
+    -  -->
+
+    <button onclick="getLocation()"> Try it </button>
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+
+        function getLocation(){
+            try {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } catch {
+                x.innerHTML = err;
+            }
+        } 
+        
+        function showPosition(position){
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+        }
+
+    </script>
+    
+</body>
+</html>
